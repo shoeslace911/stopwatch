@@ -13,7 +13,7 @@ let seconds = 0;
 let minutes = 0;
 
 let counter = () => {
-  setInterval(() => {
+  setInterval((_) => {
     milliSeconds++;
     milliSecondsTime.innerHTML = milliSeconds;
     secondsTime.innerHTML = seconds;
@@ -25,3 +25,6 @@ let counter = () => {
 };
 
 startButton.addEventListener("click", counter);
+stopButton.addEventListener("click", (_) => {
+  clearInterval(counter); // stoppign time wont fucking work ass
+});
